@@ -1,0 +1,45 @@
+import React from "react";
+import QuoteCard from "./QuoteCard"; // Make sure this path is correct
+
+const QuotesSection: React.FC = () => {
+  const quotations = [
+    {
+      title: "Power Direct",
+      price: 2160,
+      discount: "-10%",
+      features: [
+        "Power purchasing agreement",
+        "Achieve energy independence and security",
+        "Zero upfront cost",
+        "Hassle free maintenance and efficiency guarantee",
+      ],
+    },
+    {
+      title: "Solar Saver",
+      price: 1890,
+      discount: "-5%",
+      features: [
+        "Flexible leasing option",
+        "Reduce carbon footprint",
+        "Low monthly fees",
+        "24/7 support included",
+      ],
+    },
+    {
+      title: "Green Flex",
+      price: 2350,
+      features: [
+        "Customizable installation plan",
+        "Own your system in 5 years",
+        "Insurance and warranty included",
+        "No hidden fees",
+      ],
+    },
+  ];
+return(
+    ""
+);
+};
+
+export default QuotesSection;
+
