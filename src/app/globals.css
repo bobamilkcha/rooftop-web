@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @plugin 'tailwind-scrollbar' {
     nocompatible: true;
     preferredStrategy: 'pseudoelements';
@@ -8,6 +9,18 @@
     --font-exo2: var(--font-exo2);
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
+    --color-rtgray-50: #F9FAFB;
+    --color-rtgray-100: #F3F4F6;  
+    --color-rtgray-200: #E6E6EA;
+    --color-rtgray-300: #D3D4D9;
+    --color-rtgray-400: #9EA1AD;
+    --color-rtgray-500: #6D707E;
+    --color-rtgray-600: #4D5261;
+    --color-rtgray-700: #3A3F4E;
+    --color-rtgray-800: #222634;
+    --color-rtgray-900: #141624;
+    --color-rtgray-1000: #080912;
+    --color-rtyellow-200: #FCD913;
 }
 
 :root {
