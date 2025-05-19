@@ -58,7 +58,7 @@ const ConfirmationPage = () => {
     <>
     <div className="flex flex-col flex-grow items-center text-white">
         {/* Progress Bar */}
-        <div className="bg-[#222634] w-full h-14 flex items-center justify-between px-6">
+        <div className="bg-rtgray-800 w-full h-14 flex items-center justify-between px-6">
             <span className="text-white">Confirmation</span>
             <div className="flex gap-2">
                 <div className={`w-4 h-1 bg-[#BA8002]`}></div>
@@ -77,7 +77,7 @@ const ConfirmationPage = () => {
                     <h3 className="font-medium">Tariff Category</h3>
                     <p>{tariff || "Not found"}</p>
                 </div>
-                <button className="text-sm bg-[#FCD913] text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
+                <button className="text-sm bg-rtyellow-200 text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
                     setSteps(3)
                     router.push("/calculate")
                 }}>
@@ -90,7 +90,7 @@ const ConfirmationPage = () => {
                     <h3 className="font-medium">Building Type</h3>
                     <p>{buildingType || "Not found"}</p>
                 </div>
-                <button className="text-sm bg-[#FCD913] text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
+                <button className="text-sm bg-rtyellow-200 text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
                     setSteps(2)
                     router.push("/calculate")
                 }}>
@@ -103,7 +103,7 @@ const ConfirmationPage = () => {
                     <h3 className="font-medium">Peak Power Demand</h3>
                     <p>{peakPowerDemand ? peakPowerDemand + "kW" : "Not found"}</p>
                 </div>
-                <button className="text-sm bg-[#FCD913] text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
+                <button className="text-sm bg-rtyellow-200 text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
                     setSteps(4)
                     router.push("/calculate")
                 }}>
@@ -116,7 +116,7 @@ const ConfirmationPage = () => {
                     <h3 className="font-medium">Peak Hour Ratio</h3>
                     <p>{peakHourRatio || "Not found"}</p>
                 </div>
-                <button className="text-sm bg-[#FCD913] text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
+                <button className="text-sm bg-rtyellow-200 text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
                     setSteps(4)
                     router.push("/calculate")
                 }}>
@@ -130,7 +130,7 @@ const ConfirmationPage = () => {
                     <h3 className="font-medium">Address</h3>
                     <p>{address || "Not found"}</p>
                 </div>
-                <button className="text-sm bg-[#FCD913] text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
+                <button className="text-sm bg-rtyellow-200 text-black px-2 py-1 rounded hover:bg-[#BA8002]" onClick={()=> {
                     setSteps(4)
                     router.push("/calculate")
                 }}>
@@ -143,7 +143,7 @@ const ConfirmationPage = () => {
                     <h3 className="font-medium">Monthly Bills (RM)</h3>
                     <p>{monthlyElectricBill || "Not found"}</p>
                 </div>
-                {/* <button className="text-sm bg-[#FCD913] text-black px-2 py-1 rounded hover:bg-[#BA8002]">
+                {/* <button className="text-sm bg-rtyellow-200 text-black px-2 py-1 rounded hover:bg-[#BA8002]">
                     Edit
                 </button> */}
             </div>
@@ -152,7 +152,7 @@ const ConfirmationPage = () => {
     </div>
     {/* Footer - Positioned at the Bottom */}
     <div className="w-full px-6 pb-6 mt-auto justify-items-center">
-        <button disabled={nextDisabled} onClick={()=>{handleEstimateQuote()}} className={`w-full max-w-md p-3 text-md font-medium rounded-md flex items-center justify-center ${nextDisabled ? "bg-gray-600 cursor-not-allowed" : "bg-[#FCD913] text-black hover:bg-[#FCD913] transform hover:scale-105 cursor-pointer duration-300"}`} >
+        <button disabled={nextDisabled} onClick={()=>{handleEstimateQuote()}} className={`w-full max-w-md p-3 text-md font-medium rounded-md flex items-center justify-center ${nextDisabled ? "bg-gray-600 cursor-not-allowed" : "bg-rtyellow-200 text-black hover:bg-rtyellow-200 transform hover:scale-105 cursor-pointer duration-300"}`} >
             {"Estimate your quote"} →
         </button>
         <button onClick={()=> {

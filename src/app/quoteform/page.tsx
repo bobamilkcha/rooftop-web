@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../components/Newheader';
 import Footer from '../components/layouts/Footer';
+import Link from "next/link";
 
 // Based on Pos Malaysia Database
 const postcodeAreas = [
@@ -64,7 +65,7 @@ return '';
 
 const initialMonthlyBill = 100;
 
-const useElectricBillStore = () => {
+export const useElectricBillStore = () => {
     const [steps, setSteps] = useState(1);
     const [monthlyElectricBill, setMonthlyElectricBill] = useState<number | null>(initialMonthlyBill);
     const [buildingType, setBuildingType] = useState<string | null>(null);
@@ -247,30 +248,30 @@ const CalculatePage = () => {
 
     const nextButtonClasses = `font-medium py-3 px-6 rounded-full focus:outline-none focus:shadow-outline w-[240px] h-[48px] ${
         nextDisabled
-            ? 'opacity-50 cursor-not-allowed bg-[#FFDA63] text-[#141624]'
+            ? 'opacity-50 cursor-not-allowed bg-[#FFDA63] text-rtgray-900'
             : isNextButtonHovered
-            ? 'bg-[#ffffff] text-[#141624] cursor-pointer'
-            : 'bg-[#fcd913] text-[#141624] cursor-pointer'
+            ? 'bg-rtwhite text-rtgray-900 cursor-pointer'
+            : 'bg-rtyellow-200 text-rtgray-900 cursor-pointer'
     }`;
 
     const getQuoteButtonClasses = `font-medium py-3 px-6 rounded-full focus:outline-none focus:shadow-outline w-[240px] h-[48px] ${
         isSubmitting
-            ? 'opacity-50 cursor-not-allowed bg-[#FFDA63] text-[#141624]'
+            ? 'opacity-50 cursor-not-allowed bg-[#FFDA63] text-rtgray-900'
             : isNextButtonHovered
-            ? 'bg-[#ffffff] text-[#141624] cursor-pointer'
-            : 'bg-[#fcd913] text-[#141624] cursor-pointer'
+            ? 'bg-rtwhite text-rtgray-900 cursor-pointer'
+            : 'bg-rtyellow-200 text-rtgray-900 cursor-pointer'
     }`;
 
     const backButtonClasses = `bg-transparent border border-[#6B7280] text-white font-medium py-3 px-6 rounded-full focus:outline-none focus:shadow-outline w-[240px] h-[48px] ${
-        isBackButtonHovered ? 'bg-[#ffffff] text-[#141624] cursor-pointer border-[#ffffff]' : ''
+        isBackButtonHovered ? 'bg-rtwhite text-rtgray-900 cursor-pointer border-rtwhite' : ''
     }`;
 
     return (
-        <div className="min-h-screen bg-[#141624] text-white flex flex-col items-center font-exo2">
+        <div className="min-h-screen bg-rtgray-900 text-white flex flex-col items-center font-exo2">
             <Header />
             <div className="pt-20 pb-16 px-8 md:px-32 lg:px-48 flex flex-col items-center flex-grow w-full">
                 {/* Progress Bar */}
-                <div className="w-full max-w-[1200px] h-[60px] bg-[#080912] flex items-center justify-between px-6 mb-8"
+                <div className="w-full max-w-[1200px] h-[60px] bg-rtgray-1000 flex items-center justify-between px-6 mb-8"
                 style={{ borderRadius: '1000px' }}
                 >
                 {/* Container: main style, dimensions, and flex layout. */}
@@ -309,11 +310,11 @@ const CalculatePage = () => {
                                 <div>
                                     <label className="block text-base mb-1">Monthly electricity bill</label>
                                     <div className="relative mb-6 flex items-center">
-                                        <div className="absolute left-3 text-[#D3D4D9] text-2xl font-medium pointer-events-none flex items-center h-full">RM</div>
+                                        <div className="absolute left-3 text-rtgray-300 text-2xl font-medium pointer-events-none flex items-center h-full">RM</div>
                                         <input
                                             type="text"
                                             id="monthlyBill"
-                                            className="shadow appearance-none border border-[#222634] rounded w-full h-[60px] py-2 pl-16 text-[#FCD913] leading-tight focus:outline-none focus:shadow-outline bg-[#080912] text-left text-2xl font-medium placeholder-gray-400"
+                                            className="shadow appearance-none border border-rtgray-800 rounded w-full h-[60px] py-2 pl-16 text-rtyellow-200 leading-tight focus:outline-none focus:shadow-outline bg-rtgray-1000 text-left text-2xl font-medium placeholder-gray-400"
                                             placeholder="0"
                                             value={inputValue}
                                             onChange={handleInputChange}
@@ -341,16 +342,16 @@ const CalculatePage = () => {
                                             "w-full md:w-[250px] h-[148px] rounded-xl",
                                             "transition-all duration-300 border hover:scale-105",
                                             buildingType === "Commercial"
-                                                ? "border-[#FCD913] text-black bg-[#FCD913] shadow-[0_0_20px_rgba(252,217,19,0.35)]"
-                                                : "bg-[#222634] border-[#3A3F4E] text-white"
+                                                ? "border-rtyellow-200 text-black bg-rtyellow-200 shadow-[0_0_20px_rgba(252,217,19,0.35)]"
+                                                : "bg-rtgray-800 border-rtgray-700 text-white"
                                         )}
                                     >
                                         <div className={cn(
                                             "w-10 h-10 rounded-full flex items-center justify-center",
                                             "transition-all duration-300 ",
                                             buildingType === "Commercial" 
-                                                ? "bg-[#D9A003]" 
-                                                : "bg-[#3A3F4E]"
+                                                ? "bg-rtorange-300" 
+                                                : "bg-rtgray-700"
                                         )}>
                                             <LuBuilding className={cn(
                                                 "w-5 h-5 transition-all duration-300",
@@ -369,16 +370,16 @@ const CalculatePage = () => {
                                             "w-full md:w-[250px] h-[148px] rounded-xl",
                                             "transition-all duration-300 border hover:scale-105",
                                             buildingType === "Industrial"
-                                                ? "border-[#FCD913] text-black bg-[#FCD913] shadow-[0_0_20px_rgba(252,217,19,0.35)]"
-                                                : "bg-[#222634] border-[#3A3F4E] text-white"
+                                                ? "border-rtyellow-200 text-black bg-rtyellow-200 shadow-[0_0_20px_rgba(252,217,19,0.35)]"
+                                                : "bg-rtgray-800 border-rtgray-700 text-white"
                                         )}
                                     >
                                         <div className={cn(
                                             "w-10 h-10 rounded-full flex items-center justify-center",
                                             "transition-all duration-300",
                                             buildingType === "Industrial" 
-                                                ? "bg-[#D9A003]" 
-                                                : "bg-[#3A3F4E]"
+                                                ? "bg-rtorange-300" 
+                                                : "bg-rtgray-700"
                                         )}>
                                             <LuFactory className={cn(
                                                 "w-5 h-5 transition-all duration-300",
@@ -392,7 +393,7 @@ const CalculatePage = () => {
                                 </div>
 
                                 <p className="text-sm text-gray-400 mt-6 text-left">
-                                    <a href="#" className="underline hover:text-[#FCD913] transition-colors">
+                                    <a href="#" className="underline hover:text-rtyellow-200 transition-colors">
                                         Difference between commercial and industrial businesses
                                     </a>
                                 </p>
@@ -423,16 +424,16 @@ const CalculatePage = () => {
                                                 "transition-all duration-300 border hover:scale-105",
                                                 "w-full sm:w-[284px] h-[60px]",
                                                 tariff === tempTariff
-                                                    ? "border-[#FCD913] text-black bg-[#FCD913] shadow-[0_0_15px_rgba(252,217,19,0.35)]"
-                                                    : "bg-[#222634] border-[#3A3F4E] text-white"
+                                                    ? "border-rtyellow-200 text-black bg-rtyellow-200 shadow-[0_0_15px_rgba(252,217,19,0.35)]"
+                                                    : "bg-rtgray-800 border-rtgray-700 text-white"
                                                 )}
                                             >
                                                 <div className={cn(
                                                 "w-8 h-8 rounded-full flex items-center justify-center",
                                                 "transition-all duration-300",
                                                 tariff === tempTariff 
-                                                    ? "bg-[#D9A003]" 
-                                                    : "bg-[#3A3F4E]"
+                                                    ? "bg-rtorange-300" 
+                                                    : "bg-rtgray-700"
                                                 )}>
                                                 <img 
                                                     src="/B.svg" 
@@ -455,7 +456,7 @@ const CalculatePage = () => {
 
                                 <div className="space-y-2">
                                     <p className="text-left text-sm text-gray-400">
-                                        <a href="#" className="underline hover:text-[#FCD913] transition-colors">
+                                        <a href="#" className="underline hover:text-rtyellow-200 transition-colors">
                                             Where to find my tariff?
                                         </a>
                                     </p>
@@ -477,7 +478,7 @@ const CalculatePage = () => {
                                     <div className="relative">
                                         <input
                                             type="number"
-                                            className="w-full bg-transparent border border-gray-600 rounded-lg p-3 text-[#FCD913] placeholder-gray-400 pr-10"
+                                            className="w-full bg-transparent border border-gray-600 rounded-lg p-3 text-rtyellow-200 placeholder-gray-400 pr-10"
                                             value={peakPowerDemand ?? ""}
                                             onChange={(e) => {
                                                 const value = e.target.value;
@@ -490,7 +491,7 @@ const CalculatePage = () => {
                                         </span>
                                     </div>
                                     <p className="text-left text-sm text-gray-400 mt-2">
-                                        <a href="#" className="underline hover:text-[#FCD913] transition-colors">
+                                        <a href="#" className="underline hover:text-rtyellow-200 transition-colors">
                                             Where to find my peak power demand?
                                         </a>
                                     </p>
@@ -511,7 +512,7 @@ const CalculatePage = () => {
                                     <label className="block text-base mb-1">Building Postcode</label>
                                     <input
                                         type="text"
-                                        className="w-full bg-transparent border border-gray-600 rounded-lg p-3 text-[#FCD913] placeholder-gray-400"
+                                        className="w-full bg-transparent border border-gray-600 rounded-lg p-3 text-rtyellow-200 placeholder-gray-400"
                                         value={postcode ?? ""}
                                         onChange={(e) => {
                                             const input = e.target.value;
@@ -556,16 +557,16 @@ const CalculatePage = () => {
                                             "w-[230px] h-[128px] rounded-xl",
                                             "transition-all duration-300 border hover:scale-105",
                                             peakHourRatio === "0800-1700"
-                                                ? "border-[#FCD913] text-black bg-[#FCD913] shadow-[0_0_15px_rgba(252,217,19,0.35)]"
-                                                : "bg-[#222634] border-[#3A3F4E] text-white"
+                                                ? "border-rtyellow-200 text-black bg-rtyellow-200 shadow-[0_0_15px_rgba(252,217,19,0.35)]"
+                                                : "bg-rtgray-800 border-rtgray-700 text-white"
                                         )}
                                     >
                                         <div className={cn(
                                             "w-12 h-12 rounded-full flex items-center justify-center",
                                             "transition-all duration-300",
                                             peakHourRatio === "0800-1700" 
-                                                ? "bg-[#D9A003]" 
-                                                : "bg-[#3A3F4E]"
+                                                ? "bg-rtorange-300" 
+                                                : "bg-rtgray-700"
                                         )}>
                                             <img 
                                                 src="/quoteform/sun.svg" 
@@ -590,16 +591,16 @@ const CalculatePage = () => {
                                             "w-[230px] h-[128px] rounded-xl",
                                             "transition-all duration-300 border hover:scale-105",
                                             peakHourRatio === "0800-2200"
-                                                ? "border-[#FCD913] text-black bg-[#FCD913] shadow-[0_0_15px_rgba(252,217,19,0.35)]"
-                                                : "bg-[#222634] border-[#3A3F4E] text-white"
+                                                ? "border-rtyellow-200 text-black bg-rtyellow-200 shadow-[0_0_15px_rgba(252,217,19,0.35)]"
+                                                : "bg-rtgray-800 border-rtgray-700 text-white"
                                         )}
                                     >
                                         <div className={cn(
                                             "w-12 h-12 rounded-full flex items-center justify-center",
                                             "transition-all duration-300",
                                             peakHourRatio === "0800-2200" 
-                                                ? "bg-[#D9A003]" 
-                                                : "bg-[#3A3F4E]"
+                                                ? "bg-rtorange-300" 
+                                                : "bg-rtgray-700"
                                         )}>
                                             <img 
                                                 src="/quoteform/sunset.svg" 
@@ -624,16 +625,16 @@ const CalculatePage = () => {
                                             "w-[230px] h-[128px] rounded-xl",
                                             "transition-all duration-300 border hover:scale-105",
                                             peakHourRatio === "24-hours"
-                                                ? "border-[#FCD913] text-black bg-[#FCD913] shadow-[0_0_15px_rgba(252,217,19,0.35)]"
-                                                : "bg-[#222634] border-[#3A3F4E] text-white"
+                                                ? "border-rtyellow-200 text-black bg-rtyellow-200 shadow-[0_0_15px_rgba(252,217,19,0.35)]"
+                                                : "bg-rtgray-800 border-rtgray-700 text-white"
                                         )}
                                     >
                                         <div className={cn(
                                             "w-12 h-12 rounded-full flex items-center justify-center",
                                             "transition-all duration-300",
                                             peakHourRatio === "24-hours" 
-                                                ? "bg-[#D9A003]" 
-                                                : "bg-[#3A3F4E]"
+                                                ? "bg-rtorange-300" 
+                                                : "bg-rtgray-700"
                                         )}>
                                             <img 
                                                 src="/quoteform/moon-star.svg" 
@@ -667,9 +668,9 @@ const CalculatePage = () => {
                                 <h2 className="text-2xl font-bold mb-6">Check your details</h2>
                                 <div className="rounded-lg p-6 w-full space-y-4">
                                     <div className="flex flex-col items-start justify-between">
-                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: '#D3D4D9' }}>Monthly electricity bill</span>
+                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: 'rtgray-300' }}>Monthly electricity bill</span>
                                         <div className="flex justify-between items-center w-full">
-                                            <span className="text-[#FFFFFF] font-medium" style={{ fontSize: '20px' }}>{monthlyElectricBill?.toFixed(2)}</span>
+                                            <span className="text-rtwhite font-medium" style={{ fontSize: '20px' }}>{monthlyElectricBill?.toFixed(2)}</span>
                                             <div className="rounded-[1000px] overflow-hidden" style={{ width: '100px', height: '46px' }}>
                                                 <button
                                                     onClick={() => handleEdit(1)}
@@ -690,7 +691,7 @@ const CalculatePage = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-start justify-between">
-                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: '#D3D4D9' }}>Your building type</span>
+                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: 'rtgray-300' }}>Your building type</span>
                                         <div className="flex justify-between items-center w-full">
                                             <span className="text-white" style={{ fontSize: '20px' }}>{buildingType}</span>
                                             <div className="rounded-[1000px] overflow-hidden" style={{ width: '100px', height: '46px' }}>
@@ -713,7 +714,7 @@ const CalculatePage = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-start justify-between">
-                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: '#D3D4D9' }}>Your tariff</span>
+                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: 'rtgray-300' }}>Your tariff</span>
                                         <div className="flex justify-between items-center w-full">
                                             <span className="text-white" style={{ fontSize: '20px' }}>{tariff}</span>
                                             <div className="rounded-[1000px] overflow-hidden" style={{ width: '100px', height: '46px' }}>
@@ -736,7 +737,7 @@ const CalculatePage = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-start justify-between">
-                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: '#D3D4D9' }}>Peak hour demand</span>
+                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: 'rtgray-300' }}>Peak hour demand</span>
                                         <div className="flex justify-between items-center w-full">
                                             <span className="text-white" style={{ fontSize: '20px' }}>{peakPowerDemand} kW</span>
                                             <div className="rounded-[1000px] overflow-hidden" style={{ width: '100px', height: '46px' }}>
@@ -759,7 +760,7 @@ const CalculatePage = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-start justify-between">
-                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: '#D3D4D9' }}>Building postcode</span>
+                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: 'rtgray-300' }}>Building postcode</span>
                                         <div className="flex justify-between items-center w-full">
                                             <span className="text-white" style={{ fontSize: '20px' }}>{postcode}</span>
                                             <div className="rounded-[1000px] overflow-hidden" style={{ width: '100px', height: '46px' }}>
@@ -782,7 +783,7 @@ const CalculatePage = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-start justify-between">
-                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: '#D3D4D9' }}>Business operational hours</span>
+                                        <span className="text-lg mb-1" style={{ fontSize: '14px', color: 'rtgray-300' }}>Business operational hours</span>
                                         <div className="flex justify-between items-center w-full">
                                             <span className="text-white" style={{ fontSize: '20px' }}>{peakHourRatio}</span>
                                             <div className="rounded-[1000px] overflow-hidden" style={{ width: '100px', height: '46px' }}>
@@ -843,6 +844,7 @@ const CalculatePage = () => {
                             {isEditing ? 'Confirm' : 'View Quote →'}
                         </button>
                     ) : (
+                        <Link href="/quotesummary">
                         <button
                             className={getQuoteButtonClasses}
                             onClick={handleGetQuote}
@@ -852,6 +854,7 @@ const CalculatePage = () => {
                         >
                             {isSubmitting ? "Submitting..." : "Get my quote"}
                         </button>
+                        </Link>
                     )}
                 </div>
             </div>

@@ -72,7 +72,7 @@ export default function Home() {
 
   const features: { icon: React.ReactNode; title: string; description: string }[] = [
     {
-      icon: <Coins className="text-[#FCD913] w-10 h-10" />,
+      icon: <Coins className="text-rtyellow-200 w-10 h-10" />,
       title: 'Savings right now',
       description: 'Immediately reduce your monthly electricity bill with no additional cost',
     },
@@ -82,12 +82,12 @@ export default function Home() {
       description: 'Use our quote estimation tool to see your potential savings.',
     },
     {
-      icon: <Handshake className="text-[#FCD913] w-10 h-10" />,
+      icon: <Handshake className="text-rtyellow-200 w-10 h-10" />,
       title: 'Rooftop Ownership',
       description: 'We will own the solar PV system and cover all related costs during the contract.',
     },
     {
-      icon: <LogOut className="text-[#FCD913] w-10 h-10" />,
+      icon: <LogOut className="text-rtyellow-200 w-10 h-10" />,
       title: 'Flexible exit plans',
       description: 'Short lock-in period with exit options at various contract stages.',
     },
@@ -95,13 +95,13 @@ export default function Home() {
 
   return (
     <SkeletonTheme baseColor="#222634" highlightColor="#4D5261">
-      <div className={`min-h-screen bg-[#141624] text-white ${exo2.className}`}>
+      <div className={`min-h-screen bg-rtgray-900 text-white ${exo2.className}`}>
         <div className="relative">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-60"
             style={{ backgroundImage: "url('/main/solar-background-horizontal.png')" }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#141624] via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-rtgray-900 via-transparent to-transparent"></div>
 
           <Header className="absolute w-full z-50 bg-transparent" />
 
@@ -127,16 +127,16 @@ export default function Home() {
                   <div className="text-5xl lg:text-8xl font-semibold mb-6 lg:mb-10">
                     Democratizing <br /> Solar Energy
                   </div>
-                  <p className="text-xl font-light text-[#E6E6EA] mb-24">
+                  <p className="text-xl font-light text-rtgray-200 mb-24">
                     Making solar accessible to all Malaysian businesses
                   </p>
                   <div className="flex flex-col items-center mt-12">
                     <Link href="/quoteform">
-                    <button className="opacity-50 justify-center w-[250px] h-[40px] mb-4 bg-[#FCD913] text-black text-[14px] lg:text-sm font-semibold rounded-full flex items-center gap-3 transition duration-300">
+                    <button className="opacity-50 justify-center w-[250px] h-[40px] mb-4 bg-rtyellow-200 text-black text-[14px] lg:text-sm font-semibold rounded-full flex items-center gap-3 transition duration-300">
                       Get Quote Now <BsArrowRight size={18} />
                     </button>
                     </Link>
-                    <div className="bg-[#FCD913] text-[13px] text-black font-medium w-[126px] h-[32px] px-4 rounded-sm rounded-tl-2xl rounded-br-2xl flex items-center justify-center text-center">
+                    <div className="bg-rtyellow-200 text-[13px] text-black font-medium w-[126px] h-[32px] px-4 rounded-sm rounded-tl-2xl rounded-br-2xl flex items-center justify-center text-center">
                       COMING SOON
                     </div>
                   </div>
@@ -146,7 +146,7 @@ export default function Home() {
           </section>
         </div>
 
-        <section className="mt-28 lg:mt-16 bg-[#141624]">
+        <section className="mt-28 lg:mt-16 bg-rtgray-900">
           <div className="container mx-auto lg:px-[120px] max-w-[1440px]">
             <div className="mb-16">
               {isLoading ? (
@@ -156,10 +156,10 @@ export default function Home() {
                 </>
               ) : (
                 <ScrollReveal className='px-12 lg:px-0'>
-                  <div className="text-4xl font-semibold text-[#FCD913] mb-4">
+                  <div className="text-4xl font-semibold text-rtyellow-200 mb-4">
                     Introducing Power <span className="block lg:inline">Direct</span>
                   </div>
-                  <p className="text-base lg:text-xl text-[#D3D4D9] mt-4">
+                  <p className="text-base lg:text-xl text-rtgray-300 mt-4">
                     An affordable solar financing plan for
                     <span className="block lg:inline"> everyday Malaysian to save from day one.</span>
                   </p>
@@ -172,7 +172,7 @@ export default function Home() {
                 Array.from({ length: 4 }).map((_, index) => (
                   <div
                     key={index}
-                    className="w-[300px] lg:w-[252px] h-[264px] lg:h-[282px] bg-[#222634] rounded-xl px-6 py-[24px] flex flex-col mb-12 lg:mb-0 mx-auto"
+                    className="w-[300px] lg:w-[252px] h-[264px] lg:h-[282px] bg-rtgray-800 rounded-xl px-6 py-[24px] flex flex-col mb-12 lg:mb-0 mx-auto"
                   >
                     <div className="flex flex-col items-center text-center">
                       <div>
@@ -194,13 +194,13 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="w-[300px] lg:w-[252px] h-[264px] lg:h-[282px] bg-[#222634] rounded-xl px-6 py-[24px] flex flex-col mb-12 lg:mb-0 mx-auto"
+                    className="w-[300px] lg:w-[252px] h-[264px] lg:h-[282px] bg-rtgray-800 rounded-xl px-6 py-[24px] flex flex-col mb-12 lg:mb-0 mx-auto"
                   >
                     <div className="flex flex-col items-center text-center">
                       <div>{item.icon}</div>
                       <div className="text-xl font-semibold mt-6 lg:mt-8">{item.title}</div>
                     </div>
-                    <p className="text-lg font-light text-[#D3D4D9] mt-6 text-left">{item.description}</p>
+                    <p className="text-lg font-light text-rtgray-300 mt-6 text-left">{item.description}</p>
                   </ScrollReveal>
                 ))
               )}
@@ -208,13 +208,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mb-16 bg-[#141624]">
+        <section className="mb-16 bg-rtgray-900">
           <div className="container mx-auto px-6 lg:px-[120px] max-w-[1440px]">
             <div className="grid grid-cols-1 lg:grid-cols-6 gap-6 items-stretch pt-8 lg:pt-0">
               {isLoading ? (
                 <>
                   <div className="col-span-1 lg:col-span-3">
-                    <div className="group w-full lg:h-[110px] bg-[#222634] px-4 lg:px-6 py-5 rounded-2xl flex flex-col justify-center">
+                    <div className="group w-full lg:h-[110px] bg-rtgray-800 px-4 lg:px-6 py-5 rounded-2xl flex flex-col justify-center">
                       <div className="font-semibold flex items-center justify-between text-[20px]">
                         <Skeleton height={24} width="30%" />
                         <Skeleton circle height={24} width={24} />
@@ -225,7 +225,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-span-1 lg:col-span-3">
-                    <div className="group w-full lg:h-[110px] bg-[#222634] px-4 lg:px-6 py-5 rounded-2xl flex flex-col justify-center">
+                    <div className="group w-full lg:h-[110px] bg-rtgray-800 px-4 lg:px-6 py-5 rounded-2xl flex flex-col justify-center">
                       <div className="font-semibold flex items-center justify-between text-[20px]">
                         <Skeleton height={24} width="40%" />
                         <Skeleton circle height={24} width={24} />
@@ -239,29 +239,25 @@ export default function Home() {
               ) : (
                 <>
                   <div className="col-span-1 lg:col-span-3">
-                    <Link href="/powerdirect" legacyBehavior>
-                      <a className="group w-full lg:h-[110px] bg-[#222634] px-4 lg:px-6 py-5 rounded-2xl flex flex-col justify-center transition hover:bg-[#FCD913]">
-                        <div className="font-semibold flex items-center justify-between text-[20px] text-white group-hover:text-black -mt-0.5">
-                          Power Direct
-                          <BsArrowRight className="text-[#FCD913] text-xl group-hover:text-black" />
-                        </div>
-                        <div className="font-mono text-base text-left text-[#D3D4D9] mt-1 group-hover:text-black">
-                          An affordable solar financing plan for everyday Malaysians to save from day one.
-                        </div>
-                      </a>
+                    <Link href="/powerdirect" className="group w-full lg:h-[110px] bg-rtgray-800 px-4 lg:px-6 py-5 rounded-2xl flex flex-col justify-center transition hover:bg-rtyellow-200">
+                      <div className="font-semibold flex items-center justify-between text-[20px] text-white group-hover:text-black -mt-0.5">
+                        Power Direct
+                        <BsArrowRight className="text-rtyellow-200 text-xl group-hover:text-black" />
+                      </div>
+                      <div className="font-mono text-base text-left text-rtgray-300 mt-1 group-hover:text-black">
+                        An affordable solar financing plan for everyday Malaysians to save from day one.
+                      </div>
                     </Link>
                   </div>
                   <div className="col-span-1 lg:col-span-3">
-                    <Link href="/financingplan" legacyBehavior>
-                      <a className="group w-full lg:h-[110px] bg-[#222634] px-4 lg:px-6 py-5 rounded-2xl flex flex-col justify-center transition hover:bg-[#FCD913]">
-                        <div className="font-semibold flex items-center justify-between text-[20px] text-white group-hover:text-black">
-                          All financing plans
-                          <BsArrowRight className="text-[#FCD913] text-xl group-hover:text-black" />
-                        </div>
-                        <div className="font-mono text-base text-left text-[#D3D4D9] mt-1 group-hover:text-black">
-                          Upfront payment, installments, and solar maintenance solutions.
-                        </div>
-                      </a>
+                    <Link href="/financingplan" className="group w-full lg:h-[110px] bg-rtgray-800 px-4 lg:px-6 py-5 rounded-2xl flex flex-col justify-center transition hover:bg-rtyellow-200">
+                      <div className="font-semibold flex items-center justify-between text-[20px] text-white group-hover:text-black">
+                        All financing plans
+                        <BsArrowRight className="text-rtyellow-200 text-xl group-hover:text-black" />
+                      </div>
+                      <div className="font-mono text-base text-left text-rtgray-300 mt-1 group-hover:text-black">
+                        Upfront payment, installments, and solar maintenance solutions.
+                      </div>
                     </Link>
                   </div>
                 </>
@@ -284,18 +280,14 @@ export default function Home() {
           ) : (
             <ScrollReveal>
               <div className="font-semibold flex items-center justify-between text-white text-xl">
-                <Link href="/about-us" legacyBehavior>
-                  <a>
-                    <img src="/logo.svg" alt="Rooftop Energy" className="h-18 lg:h-20 cursor-pointer" />
-                  </a>
+                <Link href="/about-us">
+                  <img src="/logo.svg" alt="Rooftop Energy" className="h-18 lg:h-20 cursor-pointer" />
                 </Link>
-                <Link href="/about-us" legacyBehavior>
-                  <a className="bg-[#FCD913] w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition hover:opacity-80">
-                    <BsArrowRight className="text-black text-2xl" />
-                  </a>
+                <Link href="/about-us" className="bg-rtyellow-200 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition hover:opacity-80">
+                  <BsArrowRight className="text-black text-2xl" />
                 </Link>
               </div>
-              <div className="font-mono text-base lg:text-xl text-[#D3D4D9] mt-4">
+              <div className="font-mono text-base lg:text-xl text-rtgray-300 mt-4">
                 We craft quotes that reflect real solar power returns. No optimistic assumptions, just data.
               </div>
             </ScrollReveal>
@@ -317,7 +309,7 @@ export default function Home() {
         )}
 
         {isLoading && (
-          <section className="my-16 bg-[#141624] px-6 lg:px-[120px]">
+          <section className="my-16 bg-rtgray-900 px-6 lg:px-[120px]">
             <div className="container mx-auto max-w-[1440px] flex flex-col items-center">
               <Skeleton height={40} width="30%" className="mb-8" />
               <Skeleton height={60} count={3} style={{ marginBottom: '1rem' }} />
@@ -326,7 +318,7 @@ export default function Home() {
         )}
 
         {!isLoading && (
-          <section className="my-16 bg-[#141624] px-6 lg:px-[120px]">
+          <section className="my-16 bg-rtgray-900 px-6 lg:px-[120px]">
             <div className="container mx-auto max-w-[1440px] flex flex-col items-center">
               <PopularFaq />
             </div>
@@ -334,14 +326,14 @@ export default function Home() {
         )}
 
         {isLoading && (
-          <section className="my-16 bg-[#141624] px-6 lg:px-[120px]">
+          <section className="my-16 bg-rtgray-900 px-6 lg:px-[120px]">
             <Skeleton height={40} width="30%" className="mb-8" />
             <Skeleton height={300} />
           </section>
         )}
 
         {!isLoading && (
-          <section className="my-16 bg-[#141624] px-6 lg:px-[120px]">
+          <section className="my-16 bg-rtgray-900 px-6 lg:px-[120px]">
             <ContactForm />
           </section>
         )}

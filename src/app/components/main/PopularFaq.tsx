@@ -40,7 +40,7 @@ const PopularFaq = () => {
 
   return (
     <div className="w-full text-white rounded-lg p-4 md:p-6">
-      <h2 className="text-3xl md:text-4xl font-semibold text-[#FCD913] mb-6 md:mb-10 text-center md:text-left">
+      <h2 className="text-3xl md:text-4xl font-semibold text-rtyellow-200 mb-6 md:mb-10 text-center md:text-left">
         Frequently Asked Questions
       </h2>
       <div className="space-y-4">
@@ -54,7 +54,7 @@ const PopularFaq = () => {
             >
               <span id={`faq-question-${index}`} className="flex-1 pr-4">{faq.question}</span>
               <motion.span
-                className='text-[#FCD913] text-4xl md:text-5xl font-extralight'
+                className='text-rtyellow-200 text-4xl md:text-5xl font-extralight'
                 style={{
                   display: 'inline-block',
                   transformOrigin: 'center'
@@ -81,7 +81,7 @@ const PopularFaq = () => {
                   className="overflow-hidden"
                   style={{ marginTop: '-1px' }} // Adjust to align visually with the border
                 >
-                  <div className="py-2 px-2 md:py-3 md:px-3 text-sm md:text-base text-[#D3D4D9] ">
+                  <div className="py-2 px-2 md:py-3 md:px-3 text-sm md:text-base text-rtgray-300 ">
                     {faq.answer}
                   </div>
                 </motion.div>

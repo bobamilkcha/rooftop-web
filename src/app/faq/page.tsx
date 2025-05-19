@@ -7,7 +7,7 @@ import Footer from '../components/layouts/Footer';
 const FaqPage = () => {
   const [query, setQuery] = useState("");
   return (
-    <div className="bg-[#141624] flex flex-col min-h-screen w-screen">
+    <div className="bg-rtgray-900 flex flex-col min-h-screen w-screen">
       <Header />
       
       <main className="flex flex-col items-center justify-center flex-grow px-4 py-10">
@@ -18,7 +18,7 @@ const FaqPage = () => {
             placeholder="Search questions..."
             value={query}
             onChange={e => setQuery(e.target.value)}
-            className="w-full p-2 mb-6 rounded border border-gray-600 bg-[#222634] text-white"
+            className="w-full p-2 mb-6 rounded border border-gray-600 bg-rtgray-800 text-white"
           />
           {/* Pass search query to Faq */}
           <Faq searchQuery={query} />

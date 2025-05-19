@@ -84,7 +84,7 @@ const QuoteInput = () => {
                     <div className="text-lg font-semibold text-white">Estimate your quote</div>
                     <div className="self-center">
                         <div className="flex gap-1">
-                            <div className="w-4 h-1 bg-[#FCD913]"></div>
+                            <div className="w-4 h-1 bg-rtyellow-200"></div>
                             <div className="w-4 h-1 bg-gray-500"></div>
                             <div className="w-4 h-1 bg-gray-500"></div>
                             <div className="w-4 h-1 bg-gray-500"></div>
@@ -99,7 +99,7 @@ const QuoteInput = () => {
                         placeholder="RM" 
                         value={bill}
                         onChange={(e) => setBill(e.target.value)}
-                        className="w-full p-2 mt-2 bg-gray-800/40 text-white border border-gray-700 rounded-md focus:ring-1 focus:ring-[#FCD913]"
+                        className="w-full p-2 mt-2 bg-gray-800/40 text-white border border-gray-700 rounded-md focus:ring-1 focus:ring-rtyellow-200"
                     />
                 </div>
                 <div className="text-center text-base my-1">or</div>
@@ -119,7 +119,7 @@ const QuoteInput = () => {
                 </div>
 
 
-                <button onClick={handleSubmit} className="w-full mt-4 bg-[#FCD913] text-black p-2 rounded-md font-medium hover:bg-[#FCD913] transition transform hover:scale-105 cursor-pointer duration-300">
+                <button onClick={handleSubmit} className="w-full mt-4 bg-rtyellow-200 text-black p-2 rounded-md font-medium hover:bg-rtyellow-200 transition transform hover:scale-105 cursor-pointer duration-300">
                     Calculate now →
                 </button>
             </div>

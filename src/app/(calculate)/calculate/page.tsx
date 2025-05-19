@@ -168,14 +168,14 @@ const CalculatePage = () => {
 
     const nextButtonClasses = `font-medium py-3 px-6 rounded-full focus:outline-none focus:shadow-outline w-[240px] h-[48px] ${
         nextDisabled
-            ? 'opacity-50 cursor-not-allowed bg-[#FFDA63] text-[#141624]'
+            ? 'opacity-50 cursor-not-allowed bg-[#FFDA63] text-rtgray-900'
             : isNextButtonHovered
-            ? 'bg-[#ffffff] text-[#141624] cursor-pointer'
-            : 'bg-[#fcd913] text-[#141624] cursor-pointer'
+            ? 'bg-rtwhite text-rtgray-900 cursor-pointer'
+            : 'bg-rtyellow-200 text-rtgray-900 cursor-pointer'
         }`;
 
     const backButtonClasses = `bg-transparent border border-[#6B7280] text-white font-medium py-3 px-6 rounded-full focus:outline-none focus:shadow-outline w-[240px] h-[48px] ${
-        isBackButtonHovered ? 'bg-[#ffffff] text-[#141624] cursor-pointer border-[#ffffff]' : ''
+        isBackButtonHovered ? 'bg-rtwhite text-rtgray-900 cursor-pointer border-rtwhite' : ''
         }`;
 
     const submitButtonClasses = `font-medium py-3 px-6 rounded-full focus:outline-none focus:shadow-outline w-[240px] h-[48px] ${
@@ -191,7 +191,7 @@ const CalculatePage = () => {
     }, [quote]);
 
     return (
-        <div className="min-h-screen bg-[#141624] text-white flex flex-col items-center font-exo2">
+        <div className="min-h-screen bg-rtgray-900 text-white flex flex-col items-center font-exo2">
             <div className="pt-20 pb-16 px-8 md:px-32 lg:px-48 flex flex-col items-center flex-grow w-full">
                 {/* Progress Bar */}
                 <div className="w-full max-w-[1200px] mb-8">
@@ -224,11 +224,11 @@ const CalculatePage = () => {
                                 <div>
                                     <label className="block text-base mb-1">Monthly electricity bill</label>
                                     <div className="relative mb-6 flex items-center">
-                                        <div className="absolute left-3 text-[#D3D4D9] text-2xl font-medium pointer-events-none flex items-center h-full">RM</div>
+                                        <div className="absolute left-3 text-rtgray-300 text-2xl font-medium pointer-events-none flex items-center h-full">RM</div>
                                         <input
                                             type="text"
                                             id="monthlyBill"
-                                            className="shadow appearance-none border border-[#222634] rounded w-full h-[60px] py-2 pl-16 text-[#FCD913] leading-tight focus:outline-none focus:shadow-outline bg-[#080912] text-left text-2xl font-medium placeholder-gray-400"
+                                            className="shadow appearance-none border border-rtgray-800 rounded w-full h-[60px] py-2 pl-16 text-rtyellow-200 leading-tight focus:outline-none focus:shadow-outline bg-rtgray-1000 text-left text-2xl font-medium placeholder-gray-400"
                                             placeholder="0"
                                             value={inputValue}
                                             onChange={handleInputChange}
@@ -253,15 +253,15 @@ const CalculatePage = () => {
                                         className={cn(
                                             "flex flex-col items-center gap-3 w-full sm:w-[400px] h-[146px]",
                                             "rounded-2xl transition-all duration-300",
-                                            "bg-[#222634] border-gray-600 text-gray-400",
+                                            "bg-rtgray-800 border-rtgray-600 text-rtgray-400",
                                             buildingType === "Commercial" &&
-                                            "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_15px_rgba(252,217,19,100)]"
+                                            "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_15px_rgba(252,217,19,100)]"
                                         )}
                                     >
                                         <div
                                             className={cn(
                                                 "w-14 h-14 rounded-full flex items-center justify-center",
-                                                buildingType === "Commercial" ? "bg-[#222634]" : "bg-[#3A3F4E]"
+                                                buildingType === "Commercial" ? "bg-rtgray-800" : "bg-rtgray-700"
                                             )}
                                         >
                                             <LuBuilding />
@@ -274,15 +274,15 @@ const CalculatePage = () => {
                                         className={cn(
                                             "flex flex-col items-center gap-3 w-full sm:w-[400px] h-[146px]",
                                             "rounded-2xl transition-all duration-300",
-                                            "bg-[#222634] border-gray-600 text-gray-400",
+                                            "bg-rtgray-800 border-rtgray-600 text-rtgray-400",
                                             buildingType === "Industrial" &&
-                                            "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_15px_rgba(252,217,19,100)]"
+                                            "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_15px_rgba(252,217,19,100)]"
                                         )}
                                     >
                                         <div
                                             className={cn(
                                                 "w-14 h-14 rounded-full flex items-center justify-center",
-                                                buildingType === "Industrial" ? "bg-[#222634]" : "bg-[#3A3F4E]"
+                                                buildingType === "Industrial" ? "bg-rtgray-800" : "bg-rtgray-700"
                                             )}
                                         >
                                             <LuFactory />
@@ -309,7 +309,7 @@ const CalculatePage = () => {
                                 className="space-y-6 flex flex-col justify-center"
                             >
                                 <h2 className="text-lg">Your Tariff</h2>
-                                <div className="max-h-90 overflow-y-auto space-y-3 scrollbar-thin scrollbar-thumb-[#6D707E] scrollbar-track-[#222634] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-w-1 m-0 p-2">
+                                <div className="max-h-90 overflow-y-auto space-y-3 scrollbar-thin scrollbar-thumb-rtgray-500 scrollbar-track-rtgray-800 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-w-1 m-0 p-2">
                                     {buildingType === "Industrial"
                                         ? INDUSTRIAL_TARIFF.map((tar, index) => (
                                             <button
@@ -317,12 +317,12 @@ const CalculatePage = () => {
                                                 onClick={() => setTariff(tar)}
                                                 className={cn(
                                                     "flex flex-row gap-3 w-full rounded-lg p-4 cursor-pointer",
-                                                    "bg-[#222634] border-gray-600 text-[#D3D4D9]",
+                                                    "bg-rtgray-800 border-gray-600 text-rtgray-300",
                                                     tariff === tar &&
-                                                    "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_8px_rgba(252,217,19,100)]"
+                                                    "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_8px_rgba(252,217,19,100)]"
                                                 )}
                                             >
-                                                <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#3A3F4E]">
+                                                <div className="w-8 h-8 rounded-full flex items-center justify-center bg-rtgray-700">
                                                     <img src="B.svg" alt="" />
                                                 </div>
                                                 <span className="items-center flex">{tar}</span>
@@ -334,12 +334,12 @@ const CalculatePage = () => {
                                                 onClick={() => setTariff(tar)}
                                                 className={cn(
                                                     "flex flex-row gap-3 w-full rounded-lg p-4 cursor-pointer",
-                                                    "bg-[#222634] border-gray-600 text-[#D3D4D9]",
+                                                    "bg-rtgray-800 border-gray-600 text-rtgray-300",
                                                     tariff === tar &&
-                                                    "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_8px_rgba(252,217,19,100)]"
+                                                    "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_8px_rgba(252,217,19,100)]"
                                                 )}
                                             >
-                                                <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#3A3F4E]">
+                                                <div className="w-8 h-8 rounded-full flex items-center justify-center bg-rtgray-700">
                                                     <img src="B.svg" alt="" />
                                                 </div>
                                                 <span className="items-center flex">{tar}</span>
@@ -423,7 +423,7 @@ const CalculatePage = () => {
                                 <div>
                                     <label className="block text-base mb-1">Business Operational Hours</label>
                                     <select
-                                        className="w-full bg-[#222634] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-[#FCD913] focus:outline-none appearance-none"
+                                        className="w-full bg-rtgray-800 border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-rtyellow-200 focus:outline-none appearance-none"
                                         value={peakHourRatio ?? ""}
                                         onChange={(e) => setPeakHourRatio(e.target.value)}
                                     >
@@ -445,10 +445,10 @@ const CalculatePage = () => {
                                 className="space-y-6 flex flex-col justify-center items-center"
                             >
                                 <h2 className="text-2xl font-bold mb-6">Check your details</h2>
-                                <div className="bg-[#222634] rounded-lg p-6 border border-gray-600 shadow-md w-full max-w-[400px] space-y-4">
+                                <div className="bg-rtgray-800 rounded-lg p-6 border border-gray-600 shadow-md w-full max-w-[400px] space-y-4">
                                     <div className="flex justify-between items-center">
                                         <span className="text-lg">Monthly electricity bill</span>
-                                        <span className="text-[#FCD913] font-medium">RM {monthlyElectricBill?.toFixed(2)}</span>
+                                        <span className="text-rtyellow-200 font-medium">RM {monthlyElectricBill?.toFixed(2)}</span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-lg">Your building type</span>

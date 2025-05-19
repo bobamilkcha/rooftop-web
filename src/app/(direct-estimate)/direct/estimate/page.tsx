@@ -39,34 +39,34 @@ const DirectEstimate = () => {
     <>
     <div className="flex flex-col text-white">
         {/* Progress Bar */}
-        <div className="bg-[#222634] h-14  border-b-3 border-[#FCD913]">
+        <div className="bg-rtgray-800 h-14  border-b-3 border-rtyellow-200">
             <div className='flex max-w-md w-full justify-between  px-6 m-auto h-full items-center'>
-                <span className={`text-[#D3D4D9]`} onClick={()=>router.push('/direct')}>Power Direct</span>
-                <div className={`text-[#FCD913]`} > Your Estimate </div>
+                <span className={`text-rtgray-300`} onClick={()=>router.push('/direct')}>Power Direct</span>
+                <div className={`text-rtyellow-200`} > Your Estimate </div>
             </div>
         </div>
 
         {step === 1 && (
         <div className="w-full max-w-md h-full m-auto pt-8 px-4">
-            <div className='text-[#FCD913]'>
+            <div className='text-rtyellow-200'>
                 <div className="text-2xl font-bold mb-2">To get an accurate estimate</div>
             </div>
             
-            <div className={`mt-12 text-sm text-[#D3D4D9]`}>Battery energy storage system (BESS)</div>
+            <div className={`mt-12 text-sm text-rtgray-300`}>Battery energy storage system (BESS)</div>
             
             
 
-            <div onClick={()=>setPreference("choose-for-me")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300 ${preference == "choose-for-me" ? "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-[#222634] border-gray-600 text-gray-400"}`}>
+            <div onClick={()=>setPreference("choose-for-me")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300 ${preference == "choose-for-me" ? "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-rtgray-800 border-gray-600 text-gray-400"}`}>
                 <div className="text-sm font-semibold mb-3">Choose for me</div>
                 <div className="text-xs">Find the biggest savings with or without</div>
             </div>
 
-            <div onClick={()=>setPreference("include")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300  ${preference == "include" ? "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-[#222634] border-gray-600 text-gray-400"}`}>
+            <div onClick={()=>setPreference("include")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300  ${preference == "include" ? "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-rtgray-800 border-gray-600 text-gray-400"}`}>
                 <div className="text-sm font-semibold mb-3">Include</div>
                 <div className="text-xs">Achieve energy independence</div>
             </div>
 
-            <div onClick={()=>setPreference("exclude")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300  ${preference == "exclude" ? "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-[#222634] border-gray-600 text-gray-400"}`}>
+            <div onClick={()=>setPreference("exclude")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300  ${preference == "exclude" ? "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-rtgray-800 border-gray-600 text-gray-400"}`}>
                 <div className="text-sm font-semibold mb-3">Exclude</div>
                 <div className="text-xs">Suggested for businesses operating in the day</div>
             </div>
@@ -79,23 +79,23 @@ const DirectEstimate = () => {
 
         {step === 2 && (
         <div className="w-full max-w-md h-full m-auto pt-8 px-4">
-            <div className='text-[#FCD913]'>
+            <div className='text-rtyellow-200'>
                 <div className="text-2xl font-bold mb-2">To get an accurate estimate</div>
             </div>
             
-            <div className={`mt-12 text-sm text-[#D3D4D9]`}>Business energy usage</div>
+            <div className={`mt-12 text-sm text-rtgray-300`}>Business energy usage</div>
 
-            <div onClick={()=>setDayUsage("day")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300 ${dayUsage == "day" ? "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-[#222634] border-gray-600 text-gray-400"}`}>
+            <div onClick={()=>setDayUsage("day")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300 ${dayUsage == "day" ? "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-rtgray-800 border-gray-600 text-gray-400"}`}>
                 <div className="text-sm font-semibold mb-3">Day</div>
                 <div className="text-xs">what time</div>
             </div>
 
-            <div onClick={()=>setDayUsage("day-night")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300 ${dayUsage == "day-night" ? "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-[#222634] border-gray-600 text-gray-400"}`}>
+            <div onClick={()=>setDayUsage("day-night")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300 ${dayUsage == "day-night" ? "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-rtgray-800 border-gray-600 text-gray-400"}`}>
                 <div className="text-sm font-semibold mb-3">Day and night</div>
                 <div className="text-xs">what time roughly</div>
             </div>
 
-            <div onClick={()=>setDayUsage("24-hour")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300 ${dayUsage == "24-hour" ? "border-[#FCD913] text-[#FCD913] bg-[#141624] shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-[#222634] border-gray-600 text-gray-400"}`}>
+            <div onClick={()=>setDayUsage("24-hour")} className={`mt-4 p-3 py-5 border rounded-sm cursor-pointer transition-all duration-300 ${dayUsage == "24-hour" ? "border-rtyellow-200 text-rtyellow-200 bg-rtgray-900 shadow-[0_0_8px_rgba(252,217,19,100)]": "bg-rtgray-800 border-gray-600 text-gray-400"}`}>
                 <div className="text-sm font-semibold mb-3">24 hours</div>
                 <div className="text-xs">fill this later</div>
             </div>
@@ -105,14 +105,14 @@ const DirectEstimate = () => {
 
         {step === 3 && (
         <div className="w-full max-w-md h-full m-auto pt-8 px-4">
-            <div className='text-[#FCD913]'>
+            <div className='text-rtyellow-200'>
                 <div className="text-2xl font-bold mb-2">Your refined estimate</div>
             </div>
             
             <div className="w-full flex justify-center my-8 mx-auto">
-                <div className="inline-flex p-1 bg-[#141624] rounded-full border border-[#3A3F4E] w-100 justify-between">
+                <div className="inline-flex p-1 bg-rtgray-900 rounded-full border border-rtgray-700 w-100 justify-between">
                     {["Monthly", "Yearly", "20 years"].map((tab) => (
-                        <button key={tab} onClick={() => setActiveTab(tab)} className={`px-3 py-1 rounded-full text-sm font-medium w-full ${ activeTab === tab ? "bg-[#F9FAFB] text-black shadow" : "text-[#F9FAFB] hover:bg-gray-700/30" } `} >
+                        <button key={tab} onClick={() => setActiveTab(tab)} className={`px-3 py-1 rounded-full text-sm font-medium w-full ${ activeTab === tab ? "bg-rtgray-50 text-black shadow" : "text-rtgray-50 hover:bg-gray-700/30" } `} >
                         {tab}
                         </button>
                     ))}
@@ -123,14 +123,14 @@ const DirectEstimate = () => {
 
             <div className="flex items-end gap-4 my-8">
                 <div className="text-2xl font-bold"><span className="text-base font-light">RM </span>1,600 <span className="text-base font-light ml-2">/month</span></div>
-                <div className="text-[#FCD913] font-semibold text-2xl ml-4">-33% <span className="text-[#D3D4D9] line-through text-base font-light ml-4">RM 2,400</span></div>
+                <div className="text-rtyellow-200 font-semibold text-2xl ml-4">-33% <span className="text-rtgray-300 line-through text-base font-light ml-4">RM 2,400</span></div>
             </div>
 
 
             {/* Stats Section */}
             <div className="space-y-2">
                 {/* 1st Stat */}
-                <div className="flex justify-between items-center bg-[#080912] p-3 pt-1 rounded-lg h-16">
+                <div className="flex justify-between items-center bg-rtgray-1000 p-3 pt-1 rounded-lg h-16">
                     <div className="flex gap-4">
                         <div className="text-2xl font-bold">24</div>
                         <div className="text-xs text-gray-400">remote solar panels</div>
@@ -139,7 +139,7 @@ const DirectEstimate = () => {
                 </div>
 
                 {/* 2nd Stat */}
-                <div className="flex justify-between items-center bg-[#080912] p-3 pt-1 rounded-lg h-16">
+                <div className="flex justify-between items-center bg-rtgray-1000 p-3 pt-1 rounded-lg h-16">
                     <div className="flex gap-4">
                         <div className="text-2xl font-bold">-50k</div>
                         <div className="text-xs text-gray-400">tonne CO₂/year</div>
@@ -149,7 +149,7 @@ const DirectEstimate = () => {
 
 
                 {/* 3rd Stat */}
-                <div className="flex justify-between items-center bg-[#080912] p-3 pt-1 rounded-lg h-16">
+                <div className="flex justify-between items-center bg-rtgray-1000 p-3 pt-1 rounded-lg h-16">
                     <div className="flex gap-4">
                         <div className="text-2xl font-bold">5</div>
                         <div className="text-xs text-gray-400">year contract with flexible exit</div>
@@ -160,16 +160,16 @@ const DirectEstimate = () => {
 
             {/* Energy Usage Distribution */}
             <div>
-                <div className="text-sm text-[#E6E6EA] mb-4 mt-10">Energy usage distribution</div>
-                <div className="w-full h-8 bg-[#080912] rounded-md flex items-center">
-                    <div className="bg-[#F2BE03] h-full rounded-l-md w-3/5 flex items-center justify-start pl-4 text-xs text-[#141624] font-bold">
+                <div className="text-sm text-rtgray-200 mb-4 mt-10">Energy usage distribution</div>
+                <div className="w-full h-8 bg-rtgray-1000 rounded-md flex items-center">
+                    <div className="bg-rtorange-200 h-full rounded-l-md w-3/5 flex items-center justify-start pl-4 text-xs text-rtgray-900 font-bold">
                         Power remote
                     </div>
                     <div className="flex-grow h-full flex items-center justify-end pr-4 text-xs">TNB</div>
                 </div>
                 <div className="flex justify-between text-sm text-gray-400 mt-4">
-                    <span className="text-[#FCD913]">30 sen/kWh</span>
-                    <span className="text-[#E6E6EA]">50 sen/kWh</span>
+                    <span className="text-rtyellow-200">30 sen/kWh</span>
+                    <span className="text-rtgray-200">50 sen/kWh</span>
                 </div>
             </div>
         </div>
@@ -179,7 +179,7 @@ const DirectEstimate = () => {
 
     {step !== 3 && (
     <div className="w-full px-4 pb-6 mt-auto justify-items-center">
-        <button onClick={handleNext} disabled={nextDisabled} className={`w-full max-w-md p-3 text-md font-medium rounded-md flex items-center justify-center ${!nextDisabled ? "bg-[#FCD913] text-black hover:bg-[#FCD913] transform hover:scale-105 cursor-pointer duration-300" : "bg-gray-600 cursor-not-allowed"} `} >
+        <button onClick={handleNext} disabled={nextDisabled} className={`w-full max-w-md p-3 text-md font-medium rounded-md flex items-center justify-center ${!nextDisabled ? "bg-rtyellow-200 text-black hover:bg-rtyellow-200 transform hover:scale-105 cursor-pointer duration-300" : "bg-gray-600 cursor-not-allowed"} `} >
             {step === 2 ? "Refine my quote" : "Next"} →
         </button>
         <button onClick={handleBack} disabled={step===1} className={`w-full max-w-md mt-3 p-3 text-md font-medium rounded-md flex items-center justify-center cursor-pointer duration-300`} >
@@ -190,7 +190,7 @@ const DirectEstimate = () => {
     
     {step === 3 && (
         <div className="mt-10 md:mt-auto">
-            <div className="w-full border-t-2 border-[#FCD913]"></div>
+            <div className="w-full border-t-2 border-rtyellow-200"></div>
             <div className="w-full max-w-md mx-auto px-4 py-6 self-center flex justify-between gap-4 ">
                 <button className="flex-1 border border-white py-2 rounded-lg flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -198,7 +198,7 @@ const DirectEstimate = () => {
                 </svg>
                 Print
                 </button>
-                <button className="flex-1 bg-[#FCD913] text-black py-2 rounded-lg flex items-center justify-center gap-2 font-bold">
+                <button className="flex-1 bg-rtyellow-200 text-black py-2 rounded-lg flex items-center justify-center gap-2 font-bold">
                 Contact us
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />

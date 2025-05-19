@@ -65,7 +65,7 @@ const CarouselComponent = () => {
       <button
         aria-label={`Go to slide ${(index ?? 0) + 1}`}
         className={`w-3 h-3 md:w-4 md:h-4 rounded-full mx-1 cursor-pointer transition-colors duration-200 ${
-          active ? "bg-white" : "bg-[#3A3F4E] hover:bg-[#4D5261]"
+          active ? "bg-white" : "bg-rtgray-700 hover:bg-rtgray-600"
         }`}
         onClick={() => onClick?.()}
       />
@@ -94,13 +94,13 @@ const CarouselComponent = () => {
   };
 
   return (
-    <section className="bg-[#141624] py-16 md:py-24 text-white overflow-hidden">
+    <section className="bg-rtgray-900 py-16 md:py-24 text-white overflow-hidden">
       <h2 className="text-3xl md:text-4xl font-semibold mb-10 md:mb-12 text-center">Our Projects</h2>
 
       <div className="relative w-full mx-auto px-4 md:px-8 lg:px-12">
         {/* Fade Effect Elements (Desktop Only) */}
-        <div className="absolute left-0 top-0 bottom-16 w-1/6 bg-gradient-to-r from-[#141624] via-[#141624] to-transparent z-10 pointer-events-none hidden lg:block" />
-        <div className="absolute right-0 top-0 bottom-16 w-1/6 bg-gradient-to-l from-[#141624] via-[#141624] to-transparent z-10 pointer-events-none hidden lg:block" />
+        <div className="absolute left-0 top-0 bottom-16 w-1/6 bg-gradient-to-r from-rtgray-900 via-rtgray-900 to-transparent z-10 pointer-events-none hidden lg:block" />
+        <div className="absolute right-0 top-0 bottom-16 w-1/6 bg-gradient-to-l from-rtgray-900 via-rtgray-900 to-transparent z-10 pointer-events-none hidden lg:block" />
 
         <div className="relative" style={{ paddingBottom: '5rem' }}>
           <Carousel

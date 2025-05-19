@@ -10,7 +10,6 @@ const Header = ({ className = '' }: { className?: string }) => {
   const [showFinancingDropdown, setShowFinancingDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const baseLinkClasses = "px-4 flex items-center h-full text-[16px] cursor-pointer font-exo2 transition-colors duration-200";
 
   useEffect(() => {
     // Prevent scrolling when mobile menu is open
@@ -48,12 +47,13 @@ const Header = ({ className = '' }: { className?: string }) => {
 
   const baseTextStyleMobile = "font-medium text-[24px] font-exo2";
   const comingSoonTextStyleMobile = "font-bold text-[12px] font-exo2";
+  const baseLinkClasses = "px-4 flex items-center h-full transition-colors duration-200 text-[16px] font-exo2";
 
   return (
     <>
       {/* Navbar container */}
       <div className={`relative w-full z-30 ${className}`}>
-        <nav className={`flex items-center justify-between py-4 px-6 md:px-12 lg:px-24 xl:px-32 transition-colors duration-300" ${
+        <nav className={`flex items-center py-4 px-6 md:px-12 lg:px-24 xl:px-32 transition-colors duration-300 ${
           isOpen ? "bg-[#1a1a1a]" : "bg-transparent"
         } lg:bg-transparent`}>
 
@@ -70,10 +70,10 @@ const Header = ({ className = '' }: { className?: string }) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-4 h-8 ml-auto">
+          <div className="hidden lg:flex flex-grow justify-center items-center space-x-4 h-8">
             <Link
               href="/about-us"
-              className={`px-4 flex items-center h-full transition-colors duration-200 text-[16px] font-exo2 ${isAboutUsPage ? 'bg-white text-gray-800 hover:bg-gray-100 rounded-full' : 'text-white hover:text-[#FCD913]'}`}
+              className={`px-4 flex items-center h-full transition-colors duration-200 text-[16px] font-exo2 ${isAboutUsPage ? 'bg-white text-gray-800 hover:bg-gray-100 rounded-full' : 'text-white hover:text-rtyellow-200'}`}
             >
               About us
             </Link>
@@ -86,7 +86,7 @@ const Header = ({ className = '' }: { className?: string }) => {
             >
               <Link
                 href="/financingplan"
-                className={`flex items-center h-8 transition-colors text-[16px] font-exo2 ${isFinancingPage || isFinancingSubPage ? 'bg-white text-gray-800 hover:bg-gray-100 rounded-full px-4 py-1' : 'text-white hover:text-[#FCD913] px-4'}`}
+                className={`flex items-center h-8 transition-colors text-[16px] font-exo2 ${isFinancingPage || isFinancingSubPage ? 'bg-white text-gray-800 hover:bg-gray-100 rounded-full px-4 py-1' : 'text-white hover:text-rtyellow-200 px-4'}`}
               >
                 Financing plans
                 <svg className={`ml-2 w-4 h-4 transition-transform duration-200 ${showFinancingDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ const Header = ({ className = '' }: { className?: string }) => {
               {showFinancingDropdown && (
                 <div
                   ref={dropdownRef}
-                  className="absolute top-full right-[-230px] mt-4 bg-[#141624]/70 backdrop-blur-lg rounded-xl shadow-2xl px-8 py-6 w-[1000px] max-w-none border border-white/20"
+                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 bg-black/70 backdrop-blur-lg rounded-xl shadow-2xl px-8 py-6 w-[1000px] max-w-none border border-white/20"
                   onMouseEnter={handleMouseEnter}
                 >
                   <div className="grid grid-cols-3 gap-6">
@@ -107,7 +107,7 @@ const Header = ({ className = '' }: { className?: string }) => {
                       href="/powerdirect"
                       className={`group hover:bg-white/10 rounded-lg p-4 transition-colors`}
                     >
-                      <h3 className={`font-bold text-white group-hover:underline group-hover:text-[#FCD913] text-[16px] font-exo2`}>
+                      <h3 className={`font-bold text-white group-hover:underline group-hover:text-rtyellow-200 text-[16px] font-exo2`}>
                         Power Direct
                       </h3>
                       <p className={`text-sm text-white/80 mt-1 text-[16px] font-exo2`}>
@@ -120,7 +120,7 @@ const Header = ({ className = '' }: { className?: string }) => {
                       href="/installment"
                       className={`group hover:bg-white/10 rounded-lg p-4 transition-colors`}
                     >
-                      <h3 className={`font-bold text-white group-hover:underline group-hover:text-[#FCD913] text-[16px] font-exo2`}>
+                      <h3 className={`font-bold text-white group-hover:underline group-hover:text-rtyellow-200 text-[16px] font-exo2`}>
                         Installment
                       </h3>
                       <p className={`text-sm text-white/80 mt-1 text-[16px] font-exo2`}>
@@ -133,7 +133,7 @@ const Header = ({ className = '' }: { className?: string }) => {
                       href="/upfrontpurchase"
                       className={`group hover:bg-white/10 rounded-lg p-4 transition-colors`}
                     >
-                      <h3 className={`font-bold text-white group-hover:underline group-hover:text-[#FCD913] text-[16px] font-exo2`}>
+                      <h3 className={`font-bold text-white group-hover:underline group-hover:text-rtyellow-200 text-[16px] font-exo2`}>
                         Upfront purchase
                       </h3>
                       <p className={`text-sm text-white/80 mt-1 text-[16px] font-exo2`}>
@@ -151,12 +151,12 @@ const Header = ({ className = '' }: { className?: string }) => {
               className={`${baseLinkClasses} ${
                 isQuoteFormPage
                   ? "bg-white text-gray-800 hover:bg-gray-100 rounded-full"
-                  : "text-white hover:text-[#FCD913]"
+                  : "text-white hover:text-rtyellow-200"
               }`}
             >
               Get your quote
             </Link>
-              {/* <span className={`bg-[#FCD913] text-black text-[10px] leading-none px-1.5 py-1 rounded-md font-bold ml-2 font-exo2`}>
+              {/* <span className={`bg-rtyellow-200 text-black text-[10px] leading-none px-1.5 py-1 rounded-md font-bold ml-2 font-exo2`}>
                 COMING SOON
               </span> */}
             </div>
@@ -167,13 +167,13 @@ const Header = ({ className = '' }: { className?: string }) => {
                 className={`${baseLinkClasses} ${
                   isFaqPage
                     ? "bg-white text-gray-800 hover:bg-gray-100 rounded-full"
-                    : "text-white hover:text-[#FCD913]"
+                    : "text-white hover:text-rtyellow-200"
                 }`}
               >
                 FAQ
               </Link>
             </div>
-          </div>
+            </div>
 
           {/* Spacer */}
           <div className="flex-grow lg:hidden"></div>
@@ -196,7 +196,7 @@ const Header = ({ className = '' }: { className?: string }) => {
         <div className="flex flex-col space-y-6 px-6 pb-8">
           <Link
             href="/about-us"
-            className={`text-white hover:text-[#FCD913] transition-colors duration-200 ${baseTextStyleMobile} ${isAboutUsPage ? 'text-[#FCD913]' : ''}`}
+            className={`text-white hover:text-rtyellow-200 transition-colors duration-200 ${baseTextStyleMobile} ${isAboutUsPage ? 'text-rtyellow-200' : ''}`}
             onClick={() => setIsOpen(false)}
           >
             About us
@@ -206,7 +206,7 @@ const Header = ({ className = '' }: { className?: string }) => {
           <div>
             <Link
               href="/financingplan"
-              className={`text-white hover:text-[#FCD913] transition-colors duration-200 block ${baseTextStyleMobile} ${isFinancingPage || isFinancingSubPage ? 'text-[#FCD913]' : ''}`}
+              className={`text-white hover:text-rtyellow-200 transition-colors duration-200 block ${baseTextStyleMobile} ${isFinancingPage || isFinancingSubPage ? 'text-rtyellow-200' : ''}`}
               onClick={() => setIsOpen(false)}
             >
               Financing plans
@@ -214,21 +214,21 @@ const Header = ({ className = '' }: { className?: string }) => {
             <div className="pl-4 mt-4 space-y-4 border-l border-gray-700">
               <Link
                 href="/powerdirect"
-                className={`block text-gray-300 hover:text-[#FCD913] transition-colors duration-200 ${baseTextStyleMobile} ${isPowerDirectPage ? 'text-[#FCD913]' : ''}`}
+                className={`block text-gray-300 hover:text-rtyellow-200 transition-colors duration-200 ${baseTextStyleMobile} ${isPowerDirectPage ? 'text-rtyellow-200' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 Power Direct
               </Link>
               <Link
                 href="/installment"
-                className={`block text-gray-300 hover:text-[#FCD913] transition-colors duration-200 ${baseTextStyleMobile} ${isInstallmentPage ? 'text-[#FCD913]' : ''}`}
+                className={`block text-gray-300 hover:text-rtyellow-200 transition-colors duration-200 ${baseTextStyleMobile} ${isInstallmentPage ? 'text-rtyellow-200' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 Installment
               </Link>
               <Link
                 href="/upfrontpurchase"
-                className={`block text-gray-300 hover:text-[#FCD913] transition-colors duration-200 ${baseTextStyleMobile} ${isUpfrontPurchasePage ? 'text-[#FCD913]' : ''}`}
+                className={`block text-gray-300 hover:text-rtyellow-200 transition-colors duration-200 ${baseTextStyleMobile} ${isUpfrontPurchasePage ? 'text-rtyellow-200' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 Upfront purchase
@@ -239,12 +239,25 @@ const Header = ({ className = '' }: { className?: string }) => {
           {/* Mobile Get Quote */}
           <div className="mt-6">
             <Link
-              href="/initialvalue"
-              className={`flex items-center gap-2 ${baseTextStyleMobile} text-white hover:text-[#FCD913] cursor-pointer ${isInitialValuePage ? 'text-[#FCD913]' : ''}`}
+              href="/quoteform"
+              className={`flex items-center gap-2 ${baseTextStyleMobile} text-white hover:text-rtyellow-200 cursor-pointer ${isInitialValuePage ? 'text-rtyellow-200' : ''}`}
               onClick={() => setIsOpen(false)}
             >
               Get your quote
-              {/* <span className={`bg-[#FCD913] text-black ${comingSoonTextStyleMobile} leading-none px-1.5 py-1 rounded-md font-bold rounded-tl-[12px] rounded-br-[12px] rounded-tr-[4px] rounded-bl-[4px]`}>
+              {/* <span className={`bg-rtyellow-200 text-black ${comingSoonTextStyleMobile} leading-none px-1.5 py-1 rounded-md font-bold rounded-tl-[12px] rounded-br-[12px] rounded-tr-[4px] rounded-bl-[4px]`}>
+                COMING SOON
+              </span> */}
+            </Link>
+          </div>
+
+          <div className="mt-6">
+            <Link
+              href="/faq"
+              className={`flex items-center gap-2 ${baseTextStyleMobile} text-white hover:text-rtyellow-200 cursor-pointer ${isInitialValuePage ? 'text-rtyellow-200' : ''}`}
+              onClick={() => setIsOpen(false)}
+            >
+              FAQ
+              {/* <span className={`bg-rtyellow-200 text-black ${comingSoonTextStyleMobile} leading-none px-1.5 py-1 rounded-md font-bold rounded-tl-[12px] rounded-br-[12px] rounded-tr-[4px] rounded-bl-[4px]`}>
                 COMING SOON
               </span> */}
             </Link>

@@ -73,7 +73,7 @@ const HeroSection = ({ isLoading }: { isLoading: boolean }) => {
                     ) : (
                         <ScrollReveal>
                             <p className="text-[16px] md:text-[20px] font-medium mb-16 max-w-2xl md:max-w-3xl text-center px-6 md:px-0">
-                                Our <span className="text-[#FCD913]">Installment Purchase Plan</span> offers easy solar ownership with flexible monthly payments, <span className="text-[#FCD913]">zero upfront costs</span>, hassle-free maintenance.
+                                Our <span className="text-rtyellow-200">Installment Purchase Plan</span> offers easy solar ownership with flexible monthly payments, <span className="text-rtyellow-200">zero upfront costs</span>, hassle-free maintenance.
                             </p>
                         </ScrollReveal>
                     )}
@@ -118,7 +118,7 @@ const FeaturesSection = ({ isLoading }: { isLoading: boolean }) => {
     ];
 
     return (
-        <section className="py-8 md:py-32 bg-[#141624] mb-8 md:mb-8">
+        <section className="py-8 md:py-32 bg-rtgray-900 mb-8 md:mb-8">
             <div className="container mx-auto px-4 max-w-[1440px] flex justify-center">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-24 md:gap-y-0 md:gap-8 lg:gap-x-24">
                     {features.map((feature, index) => (
@@ -138,7 +138,7 @@ const FeaturesSection = ({ isLoading }: { isLoading: boolean }) => {
                                         <h3 className="text-[20px] font-semibold mb-4 text-white text-center">
                                             {feature.title}
                                         </h3>
-                                        <p className="text-[18px] font-light text-[#9EA1AD] text-left">
+                                        <p className="text-[18px] font-light text-rtgray-400 text-left">
                                             {feature.description}
                                         </p>
                                     </>
@@ -177,7 +177,7 @@ const WhyInstallmentSection = ({ isLoading }: { isLoading: boolean }) => {
     ];
 
     return (
-        <section className="py-8 md:py-32 pb-4 md:pb-16 bg-[#141624] mb-8 md:mb-8">
+        <section className="py-8 md:py-32 pb-4 md:pb-16 bg-rtgray-900 mb-8 md:mb-8">
             <div className="container mx-auto px-4 max-w-[1440px] flex flex-col items-center">
                 <div className="w-full max-w-[1200px] flex flex-col">
                     <div className="w-full pl-4 lg:pl-0">
@@ -185,7 +185,7 @@ const WhyInstallmentSection = ({ isLoading }: { isLoading: boolean }) => {
                             <Skeleton className="h-10 w-48 mb-8 md:mb-16" />
                         ) : (
                             <ScrollReveal>
-                                <h2 className="text-[#FCD913] text-[32px] font-bold mb-8 md:mb-16">Why Installment?</h2>
+                                <h2 className="text-rtyellow-200 text-[32px] font-bold mb-8 md:mb-16">Why Installment?</h2>
                             </ScrollReveal>
                         )}
 
@@ -220,15 +220,15 @@ const WhyInstallmentSection = ({ isLoading }: { isLoading: boolean }) => {
                                                                 <h3 className="text-[24px] font-semibold text-white mb-3">
                                                                     {benefit.title}
                                                                 </h3>
-                                                                <p className="text-[18px] font-normal text-[#9EA1AD] leading-relaxed">
+                                                                <p className="text-[18px] font-normal text-rtgray-400 leading-relaxed">
                                                                     {benefit.description}
                                                                 </p>
                                                             </div>
                                                         </div>
                                                         <div className="relative">
-                                                            <div className={`w-full h-[1px] bg-[#222634] ${index === 2 ? 'mt-[32px] mb-8' : 'mt-8 mb-8'}`} />
+                                                            <div className={`w-full h-[1px] bg-rtgray-800 ${index === 2 ? 'mt-[32px] mb-8' : 'mt-8 mb-8'}`} />
                                                             {(index === 0 || index === 2) && index !== benefits.length - 1 ? (
-                                                                <div className={`hidden lg:block absolute right-[-96px] h-[1px] bg-[#222634] w-24 ${
+                                                                <div className={`hidden lg:block absolute right-[-96px] h-[1px] bg-rtgray-800 w-24 ${
                                                                     index === 2 ? 'top-[32px]' : 'top-[50%]'
                                                                 }`} />
                                                             ) : null}
@@ -265,7 +265,7 @@ const WhyInstallmentSection = ({ isLoading }: { isLoading: boolean }) => {
 
 const PricingSection = ({ isLoading }: { isLoading: boolean }) => {
     return (
-        <section id="pricing" className="py-8 md:py-32 pt-4 md:pt-16 bg-[#141624] mb-24 md:mb-24">
+        <section id="pricing" className="py-8 md:py-32 pt-4 md:pt-16 bg-rtgray-900 mb-24 md:mb-24">
             <div className="container mx-auto px-4 max-w-[1440px]">
                 <div className="flex flex-col max-w-[800px] mx-auto px-6 md:px-0">
                     {isLoading ? (
@@ -284,20 +284,20 @@ const PricingSection = ({ isLoading }: { isLoading: boolean }) => {
                             </ScrollReveal>
 
                             <ScrollReveal>
-                                <p className="text-[20px] font-normal text-[#D3D4D9] mb-6 text-left">
+                                <p className="text-[20px] font-normal text-rtgray-300 mb-6 text-left">
                                     Use our calculator to get a personalized quote instantly—no email required, no strings attached!
                                 </p>
                             </ScrollReveal>
 
                             <ScrollReveal>
-                                <p className="text-[20px] font-normal text-[#D3D4D9] mb-8 text-left">
+                                <p className="text-[20px] font-normal text-rtgray-300 mb-8 text-left">
                                     Discover flexible plans and make informed decisions with confidence!
                                 </p>
                             </ScrollReveal>
 
                             <ScrollReveal>
                                 <div className="flex items-center gap-4">
-                                    <button className="bg-[#FCD913] text-black py-2 px-4 rounded-tl-[16px] rounded-br-[16px] rounded-tr-[4px] rounded-bl-[4px] font-semibold text-[16px]">
+                                    <button className="bg-rtyellow-200 text-black py-2 px-4 rounded-tl-[16px] rounded-br-[16px] rounded-tr-[4px] rounded-bl-[4px] font-semibold text-[16px]">
                                         COMING SOON
                                     </button>
                                 </div>
@@ -322,12 +322,12 @@ const App = () => {
     }, []);
 
     return (
-        <div className={`min-h-screen bg-[#141624] text-white ${exo2.className}`}>
+        <div className={`min-h-screen bg-rtgray-900 text-white ${exo2.className}`}>
             <div className="relative h-[695.16px]">
                 <div className="absolute inset-0 bg-cover bg-center opacity-40"
                     style={{ backgroundImage: "url('/installmentpage/iStock-1254060111.svg')" }}>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#141624] via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-rtgray-900 via-transparent to-transparent"></div>
                 <Header className="absolute w-full z-50 bg-transparent" />
                 <HeroSection isLoading={isLoading} />
             </div>

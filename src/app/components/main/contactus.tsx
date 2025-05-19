@@ -112,9 +112,9 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-[#222634] rounded-xl max-w-2xl mx-auto font-exo2 relative">
+    <div className="bg-rtgray-800 rounded-xl max-w-2xl mx-auto font-exo2 relative">
       {notification.show && notification.type === 'success' ? (
-        <div className="p-8 rounded-xl flex flex-col items-center justify-center h-full bg-[#141624] group">
+        <div className="p-8 rounded-xl flex flex-col items-center justify-center h-full bg-rtgray-900 group">
           <div
             className="rounded-full flex items-center justify-center mb-8"
             style={{
@@ -129,12 +129,12 @@ const ContactUs = () => {
               style={{ width: '40px', height: '40px' }}
             />
           </div>
-          <p className="text-center whitespace-pre-line mb-[191px] text-[#D3D4D9] font-semibold text-[20px]">
+          <p className="text-center whitespace-pre-line mb-[191px] text-rtgray-300 font-semibold text-[20px]">
             {notification.message}
           </p>
           <button
             onClick={() => setNotification(prev => ({ ...prev, show: false }))}
-            className="bg-[#444444] text-[#D3D4D9] rounded-[68px] text-base hover:bg-[#FFFFFF] hover:text-[#000000] flex items-center justify-center py-3 px-6 w-full transition-colors duration-150"
+            className="bg-[#444444] text-rtgray-300 rounded-[68px] text-base hover:bg-rtwhite hover:text-[#000000] flex items-center justify-center py-3 px-6 w-full transition-colors duration-150"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
@@ -153,11 +153,11 @@ const ContactUs = () => {
         </div>
       ) : (
         <div className="p-8">
-          <h2 className="text-[#FCD913] text-3xl font-semibold text-center mb-6 font-exo2">Contact Us</h2>
+          <h2 className="text-rtyellow-200 text-3xl font-semibold text-center mb-6 font-exo2">Contact Us</h2>
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col sm:flex-row gap-6 mb-4">
               <div className="space-y-2 flex-1">
-                <label htmlFor="firstName" className="block text-[#D3D4D9] text-sm font-semibold mb-1">First name</label>
+                <label htmlFor="firstName" className="block text-rtgray-300 text-sm font-semibold mb-1">First name</label>
                 <input
                   type="text"
                   id="firstName"
@@ -165,12 +165,12 @@ const ContactUs = () => {
                   value={formData.firstName}
                   onChange={handleChange}
                   placeholder="First Name"
-                  className="appearance-none border border-[#4D5261] rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-[#141624] placeholder-[#6D707E] text-sm"
+                  className="appearance-none border border-rtgray-600 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-rtgray-900 placeholder-rtgray-500 text-sm"
                 />
                 {errors.firstName && <p className="text-red-500 text-xs italic">{errors.firstName}</p>}
               </div>
               <div className="space-y-2 flex-1">
-                <label htmlFor="lastName" className="block text-[#D3D4D9] text-sm font-semibold mb-1">Last name</label>
+                <label htmlFor="lastName" className="block text-rtgray-300 text-sm font-semibold mb-1">Last name</label>
                 <input
                   type="text"
                   id="lastName"
@@ -178,14 +178,14 @@ const ContactUs = () => {
                   value={formData.lastName}
                   onChange={handleChange}
                   placeholder="Last Name"
-                  className="appearance-none border border-[#4D5261] rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-[#141624] placeholder-[#6D707E] text-sm"
+                  className="appearance-none border border-rtgray-600 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-rtgray-900 placeholder-rtgray-500 text-sm"
                 />
                 {errors.lastName && <p className="text-red-500 text-xs italic">{errors.lastName}</p>}
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-6 mb-4">
               <div className="space-y-2 flex-1">
-                <label htmlFor="email" className="block text-[#D3D4D9] text-sm font-semibold mb-1">Email</label>
+                <label htmlFor="email" className="block text-rtgray-300 text-sm font-semibold mb-1">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -193,12 +193,12 @@ const ContactUs = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email"
-                  className="appearance-none border border-[#4D5261] rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-[#141624] placeholder-[#6D707E] text-sm"
+                  className="appearance-none border border-rtgray-600 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-rtgray-900 placeholder-rtgray-500 text-sm"
                 />
                 {errors.email && <p className="text-red-500 text-xs italic">{errors.email}</p>}
               </div>
               <div className="space-y-2 flex-1">
-                <label htmlFor="phoneNumber" className="block text-[#D3D4D9] text-sm font-semibold mb-1">Phone number</label>
+                <label htmlFor="phoneNumber" className="block text-rtgray-300 text-sm font-semibold mb-1">Phone number</label>
                 <input
                   type="tel"
                   id="phoneNumber"
@@ -206,13 +206,13 @@ const ContactUs = () => {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   placeholder="Phone Number"
-                  className="appearance-none border border-[#4D5261] rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-[#141624] placeholder-[#6D707E] text-sm"
+                  className="appearance-none border border-rtgray-600 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-rtgray-900 placeholder-rtgray-500 text-sm"
                 />
                 {errors.phoneNumber && <p className="text-red-500 text-xs italic">{errors.phoneNumber}</p>}
               </div>
             </div>
             <div className="space-y-2 mb-6">
-              <label htmlFor="message" className="block text-[#D3D4D9] text-sm font-semibold mb-1">Message</label>
+              <label htmlFor="message" className="block text-rtgray-300 text-sm font-semibold mb-1">Message</label>
               <textarea
                 id="message"
                 name="message"
@@ -220,13 +220,13 @@ const ContactUs = () => {
                 onChange={handleChange}
                 rows={5}
                 placeholder="Message"
-                className="appearance-none border border-[#4D5261] rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-[#141624] placeholder-[#6D707E] text-sm"
+                className="appearance-none border border-rtgray-600 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-rtgray-900 placeholder-rtgray-500 text-sm"
               ></textarea>
               {errors.message && <p className="text-red-500 text-xs italic">{errors.message}</p>}
             </div>
             <button
               type="submit"
-              className="bg-[#FCD913] hover:bg-[#FFFFFF] text-[#000000] font-medium py-3 px-6 rounded-[68px] focus:outline-none focus:shadow-outline w-full flex justify-center items-center text-base transition-colors duration-150 group"
+              className="bg-rtyellow-200 hover:bg-rtwhite text-[#000000] font-medium py-3 px-6 rounded-[68px] focus:outline-none focus:shadow-outline w-full flex justify-center items-center text-base transition-colors duration-150 group"
             >
               Inquire Now
               <img

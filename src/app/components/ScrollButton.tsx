@@ -12,7 +12,7 @@ const ScrollButton: React.FC = () => {
     <a 
       href="#pricing"
       onClick={handleClick}
-      className="w-[250px] bg-[#FCD913] hover:bg-[#FCD913]/80 text-black h-[40px] rounded-full font-semibold flex items-center justify-center cursor-pointer"
+      className="w-[250px] bg-rtyellow-200 hover:bg-rtyellow-200/80 text-black h-[40px] rounded-full font-semibold flex items-center justify-center cursor-pointer"
     >
       Get Quote Now
       <svg 

@@ -31,7 +31,7 @@ export default function OurValues() {
     const iconSize = isMobile ? "w-16 h-16" : "w-20 h-20";
 
     return (
-        <section className="relative py-8 md:py-32 lg:pt-16 pb-4 md:pb-16 text-white bg-[#141624] overflow-hidden" style={bgImageStyle}>
+        <section className="relative py-8 md:py-32 lg:pt-16 pb-4 md:pb-16 text-white bg-rtgray-900 overflow-hidden" style={bgImageStyle}>
             <div className="container mx-auto px-4 max-w-[1440px] flex flex-col items-center">
                 <div className="w-5/6 mx-auto pt-12">
                     <h2 className="text-center text-3xl md:text-4xl font-semibold mb-12 md:mb-[96px]">Our Values</h2>
@@ -39,22 +39,22 @@ export default function OurValues() {
                     {/* Top Row - 3 Cards */}
                     <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12 text-center">
                         {/* Passion Card */}
-                        <div className={`${cardSize} flex flex-col items-center justify-center mb-6 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-[#3A3F4E]/30 border border-[#9EA1AD]/50 rounded-xl shadow-lg`}>
-                            <div className={`text-[#FCD913] mb-3 md:mb-4`}><Flame className={`${iconSize}`} strokeWidth={1} /></div>
+                        <div className={`${cardSize} flex flex-col items-center justify-center mb-6 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-rtgray-700/30 border border-rtgray-400/50 rounded-xl shadow-lg`}>
+                            <div className={`text-rtyellow-200 mb-3 md:mb-4`}><Flame className={`${iconSize}`} strokeWidth={1} /></div>
                             <h3 className={`${titleSize} font-semibold mb-4 md:mb-6`}>Passion</h3>
                             <p className={`${descSize} font-normal`}>Proud of the work we do to contribute to a greener future for Malaysia.</p>
                         </div>
 
                         {/* Respect Card */}
-                        <div className={`${cardSize} flex flex-col items-center justify-center mb-6 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-[#3A3F4E]/30 border border-[#9EA1AD]/50 rounded-xl shadow-lg`}>
-                            <div className={`text-[#FCD913] mb-3 md:mb-4`}><Handshake className={`${iconSize}`} strokeWidth={1} /></div>
+                        <div className={`${cardSize} flex flex-col items-center justify-center mb-6 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-rtgray-700/30 border border-rtgray-400/50 rounded-xl shadow-lg`}>
+                            <div className={`text-rtyellow-200 mb-3 md:mb-4`}><Handshake className={`${iconSize}`} strokeWidth={1} /></div>
                             <h3 className={`${titleSize} font-semibold mb-4 md:mb-6`}>Respect</h3>
                             <p className={`${descSize} font-normal`}>Respect for our customer, competitors and stakeholders.</p>
                         </div>
 
                         {/* Integrity Card */}
-                        <div className={`${cardSize} flex flex-col items-center justify-center mb-12 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-[#3A3F4E]/30 border border-[#9EA1AD]/50 rounded-xl shadow-lg`}>
-                            <div className={`text-[#FCD913] mb-3 md:mb-4`}><ShieldUser className={`${iconSize}`} strokeWidth={1} /></div>
+                        <div className={`${cardSize} flex flex-col items-center justify-center mb-12 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-rtgray-700/30 border border-rtgray-400/50 rounded-xl shadow-lg`}>
+                            <div className={`text-rtyellow-200 mb-3 md:mb-4`}><ShieldUser className={`${iconSize}`} strokeWidth={1} /></div>
                             <h3 className={`${titleSize} font-semibold mb-4 md:mb-6`}>Integrity</h3>
                             <p className={`${descSize} font-normal`}>Transparency and honesty at our core.</p>
                         </div>
@@ -63,15 +63,15 @@ export default function OurValues() {
                     {/* Bottom Row - 2 Cards */}
                     <div className="flex flex-col lg:flex-row items-center justify-center text-center lg:mt-12">
                         {/* Determination Card */}
-                        <div className={`${cardSize} flex flex-col items-center justify-center mb-12 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-[#3A3F4E]/30 border border-[#9EA1AD]/50 rounded-xl shadow-lg lg:mr-6`}>
-                            <div className={`text-[#FCD913] mb-3 md:mb-4`}><MountainSnow className={`${iconSize}`} strokeWidth={1} /></div>
+                        <div className={`${cardSize} flex flex-col items-center justify-center mb-12 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-rtgray-700/30 border border-rtgray-400/50 rounded-xl shadow-lg lg:mr-6`}>
+                            <div className={`text-rtyellow-200 mb-3 md:mb-4`}><MountainSnow className={`${iconSize}`} strokeWidth={1} /></div>
                             <h3 className={`${titleSize} font-semibold mb-4 md:mb-6`}>Determination</h3>
                             <p className={`${descSize} font-normal`}>We embrace challenges to solve complex problems.</p>
                         </div>
 
                         {/* Excellence Card */}
-                        <div className={`${cardSize} flex flex-col items-center justify-center mb-6 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-[#3A3F4E]/30 border border-[#9EA1AD]/50 rounded-xl shadow-lg lg:ml-6`}>
-                            <div className={`text-[#FCD913] mb-3 md:mb-4`}><Trophy className={`${iconSize}`} strokeWidth={1} /></div>
+                        <div className={`${cardSize} flex flex-col items-center justify-center mb-6 lg:mb-0 p-4 md:p-6 backdrop-blur-md bg-rtgray-700/30 border border-rtgray-400/50 rounded-xl shadow-lg lg:ml-6`}>
+                            <div className={`text-rtyellow-200 mb-3 md:mb-4`}><Trophy className={`${iconSize}`} strokeWidth={1} /></div>
                             <h3 className={`${titleSize} font-semibold mb-4 md:mb-6`}>Excellence</h3>
                             <p className={`${descSize} font-normal`}>Our promise to deliver to the highest standards.</p>
                         </div>

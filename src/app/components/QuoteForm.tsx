@@ -65,12 +65,12 @@ const QuoteForm: React.FC<QuoteFormProps> = ({
               <input
                 type="text"
                 id="postcode"
-                className="border border-black p-3 block w-full font-semibold text-lg rounded-md bg-black text-[#FCD913] shadow-sm focus:border-[#FCD913] focus:ring-[#FCD913] sm:text-sm"
+                className="border border-black p-3 block w-full font-semibold text-lg rounded-md bg-black text-rtyellow-200 shadow-sm focus:border-rtyellow-200 focus:ring-rtyellow-200 sm:text-sm"
                 value={postcode}
                 onChange={(e) => onPostcodeChange(e.target.value)}
               />
               {postcode && !area && (
-                <div className="text-red-400 mt-1 text-sm font-medium mt-5">
+                <div className="text-red-400 text-sm font-medium mt-5">
                   Invalid postcode. Please enter a valid Malaysian postcode.
                 </div>
               )}
